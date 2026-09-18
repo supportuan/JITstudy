@@ -1,8 +1,8 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { NAV_LINKS } from "../constants/nav";
 import { AuthNavActions } from "./AuthNavActions";
+import { BrandLogo } from "./BrandLogo";
 
 type SiteHeaderProps = {
   showNav?: boolean;
@@ -26,14 +26,10 @@ export function SiteHeader({ showNav = true }: SiteHeaderProps) {
     <>
       <header className="fixed top-[30px] z-50 w-full px-6 md:px-8 lg:px-16">
         <div className="flex w-full items-center justify-between md:hidden">
-          <Link
-            to="/"
-            className="font-heading text-3xl tracking-tight text-black"
-            style={{ fontFamily: "var(--font-heading)" }}
-            onClick={() => setMenuOpen(false)}
-          >
-            Jitstudy
-          </Link>
+          <BrandLogo
+            titleClassName="text-3xl"
+            onNavigate={() => setMenuOpen(false)}
+          />
 
           {showNav ? (
             <button
@@ -54,14 +50,11 @@ export function SiteHeader({ showNav = true }: SiteHeaderProps) {
         </div>
 
         <div className="hidden w-full grid-cols-[1fr_auto_1fr] items-center md:grid">
-          <Link
-            to="/"
-            className="justify-self-start font-heading text-4xl tracking-tight text-black"
-            style={{ fontFamily: "var(--font-heading)" }}
-            onClick={() => setMenuOpen(false)}
-          >
-            Jitstudy
-          </Link>
+          <BrandLogo
+            className="justify-self-start"
+            titleClassName="text-4xl"
+            onNavigate={() => setMenuOpen(false)}
+          />
 
           {showNav ? (
             <nav
