@@ -12,8 +12,8 @@ export function HeroSection() {
       mobileBottomActions={<HeroCtaButtons />}
     >
       <div className="flex h-full min-h-0 flex-col items-center justify-center px-4 pt-16 pb-14 text-center max-md:justify-start max-md:px-0 max-md:pt-0 max-md:pb-0 md:pt-20 md:pb-16">
-        <div className="flex w-full flex-col items-center max-md:gap-8 md:gap-0">
-          <div className="flex w-full translate-y-[75px] flex-col items-center max-md:gap-8 md:gap-0">
+        <div className="flex w-full flex-col items-center md:gap-0">
+          <div className="flex w-full max-md:translate-y-[75px] flex-col items-center max-md:gap-8 md:translate-y-0 md:gap-0">
           <motion.div
             className="liquid-glass max-w-[92vw] -translate-y-2 rounded-full bg-black/10 px-3 py-1.5 font-body text-xs text-[hsl(var(--foreground)/0.9)] max-md:translate-y-0 md:mb-6 md:translate-y-0 md:py-2 md:text-sm"
             initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export function HeroSection() {
           </div>
 
           <motion.div
-            className="hidden -translate-y-[3px] md:block md:mt-8"
+            className="hidden md:block md:mt-8"
             initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
             animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
