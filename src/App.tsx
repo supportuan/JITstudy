@@ -10,7 +10,6 @@ function App() {
       <Navbar />
       <main>
         <SectionOne />
-        <div aria-hidden className="h-[80vh]" />
         <SectionTwo />
       </main>
     </div>
