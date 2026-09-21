@@ -1,4 +1,3 @@
-import { Share2 } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 export function SectionTwo() {
@@ -10,11 +9,11 @@ export function SectionTwo() {
       <div className="relative flex flex-1 flex-col justify-center gap-10 px-5 pt-24 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-8 sm:pt-0 md:px-12">
         <h2 className="max-w-sm text-4xl font-medium uppercase leading-[1.05] tracking-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl">
           <Reveal as="span" delay={100} className="block">
-            End to End{" "}  
-            <span className="font-light normal-case italic">Study Abroad</span>
+          Your Success,{" "}    
+            <span className="font-light normal-case italic">Our Technology,</span>
           </Reveal>
           <Reveal as="span" delay={220} className="block">
-          Recruitment Platform
+          Zero Hustle
           </Reveal>
         </h2>
 
@@ -27,30 +26,31 @@ export function SectionTwo() {
       <div className="relative flex flex-col gap-10 px-5 pb-16 sm:px-8 md:px-12 md:pb-20">
         <Reveal delay={460}>
           <p className="max-w-xs text-sm leading-relaxed text-white/85 drop-shadow-md">
-            Jitstudy is an end-to-end study abroad recruitment platform 
-            that helps students find the perfect study abroad program and university.
+          We combine global opportunities with,<br /> AI-powered tools to help agents maximize revenue. 
+          Transparent processes, guaranteed payouts, and dedicated B2B support.
           </p>
         </Reveal>
 
         <Reveal delay={580}>
           <div className="w-full max-w-xs sm:absolute sm:bottom-16 sm:left-1/2 sm:w-auto sm:max-w-none sm:-translate-x-1/2 md:bottom-20">
             <a
-              href="#talk-to-us"
+              href="https://wa.me/447721770779"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block rounded-full border border-white/60 px-10 py-3 text-center font-mono text-xs uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-white hover:text-black"
             >
-              Register Now
+              Sign Up & Start Earning
             </a>
           </div>
         </Reveal>
 
         <Reveal delay={700}>
-          <button
-            type="button"
-            className="absolute bottom-5 left-5 text-white/80 transition-colors hover:text-white sm:bottom-6 sm:left-8 md:left-12"
-            aria-label="Share"
+          <a
+            href="mailto:agents@jitstudy.com"
+            className="absolute bottom-5 left-5 font-mono text-xs text-white/85 drop-shadow-md transition-colors hover:text-white sm:bottom-6 sm:left-8 sm:text-sm md:left-12"
           >
-            <Share2 size={18} />
-          </button>
+            contact us at agents@jitstudy.com
+          </a>
         </Reveal>
       </div>
     </section>

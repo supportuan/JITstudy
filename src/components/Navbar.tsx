@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { JitstudyBrand } from "./JitstudyBrand";
 import { Reveal } from "./Reveal";
 
 const LINKS = ["Home", "About", "Services", "Destination", "FAQ"] as const;
@@ -8,12 +9,7 @@ export function Navbar() {
     <>
       <div className="fixed left-5 top-5 z-50 sm:left-8 sm:top-7 md:left-12">
         <Reveal>
-          <a
-            href="#main"
-            className="font-mono text-[30px] font-medium tracking-tight text-white drop-shadow-md sm:text-xl md:text-4xl"
-          >
-            Jitstudy
-          </a>
+          <JitstudyBrand />
         </Reveal>
       </div>
 
