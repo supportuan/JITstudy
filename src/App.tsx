@@ -1,15 +1,19 @@
-import { Route, Routes } from "react-router-dom";
-import { HeroSection } from "./components/HeroSection";
-import { LoginPage } from "./pages/LoginPage";
-import { RegisterPage } from "./pages/RegisterPage";
+import { Navbar } from "./components/Navbar";
+import { ScrollVideo } from "./components/ScrollVideo";
+import { SectionOne } from "./components/SectionOne";
+import { SectionTwo } from "./components/SectionTwo";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HeroSection />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/register" element={<RegisterPage />} />
-    </Routes>
+    <div className="relative">
+      <ScrollVideo />
+      <Navbar />
+      <main>
+        <SectionOne />
+        <div aria-hidden className="h-[80vh]" />
+        <SectionTwo />
+      </main>
+    </div>
   );
 }
 
