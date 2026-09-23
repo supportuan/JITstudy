@@ -20,7 +20,7 @@ export function Navbar() {
               <Reveal delay={100 + i * 120}>
                 <a
                   href={`#${link.replace(/\s+/g, "-")}`}
-                  className="group flex items-center gap-1 font-mono text-xs text-white/80 drop-shadow-md transition-colors duration-300 hover:text-white sm:text-sm"
+                  className="group flex items-center gap-1 font-mono text-xs text-white/80 drop-shadow-md transition-colors duration-300 hover:text-[#DA7E19] sm:text-sm"
                 >
                   {link}
                   <ArrowUpRight

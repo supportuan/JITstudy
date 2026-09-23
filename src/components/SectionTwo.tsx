@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Reveal } from "./Reveal";
 
 export function SectionTwo() {
@@ -9,11 +10,13 @@ export function SectionTwo() {
       <div className="relative flex flex-1 flex-col justify-center gap-10 px-5 pt-24 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-8 sm:pt-0 md:px-12">
         <h2 className="max-w-sm text-4xl font-medium uppercase leading-[1.05] tracking-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl">
           <Reveal as="span" delay={100} className="block">
-          Your Success,{" "}    
-            <span className="font-light normal-case italic">Our Technology,</span>
+            Your Success
           </Reveal>
-          <Reveal as="span" delay={220} className="block">
-          Zero Hustle
+          <Reveal as="span" delay={220} className="block whitespace-nowrap font-light normal-case italic">
+            Our Technology
+          </Reveal>
+          <Reveal as="span" delay={340} className="block">
+            Zero Hustle
           </Reveal>
         </h2>
 
@@ -33,14 +36,12 @@ export function SectionTwo() {
 
         <Reveal delay={580}>
           <div className="w-full max-w-xs sm:absolute sm:bottom-16 sm:left-1/2 sm:w-auto sm:max-w-none sm:-translate-x-1/2 md:bottom-20">
-            <a
-              href="https://wa.me/447721770779"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block rounded-full border border-white/60 px-10 py-3 text-center font-mono text-xs uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-white hover:text-black"
+            <Link
+              to="/login"
+              className="block rounded-full border border-white/60 px-10 py-3 text-center font-mono text-xs uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-[#DA7E19] hover:text-black"
             >
-              Sign Up & Start Earning
-            </a>
+              Login and Register
+            </Link>
           </div>
         </Reveal>
 

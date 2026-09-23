@@ -1,24 +1,28 @@
 import { ArrowDown } from "lucide-react";
 import { Reveal } from "./Reveal";
 
-export function SectionOne() {
+type SectionOneProps = {
+  onContactClick?: () => void;
+};
+
+export function SectionOne({ onContactClick }: SectionOneProps) {
   return (
     <section
       id="main"
       className="relative flex min-h-screen flex-col justify-end supports-[height:100svh]:min-h-[100svh]"
     >
       <div className="relative flex flex-col gap-10 px-5 pb-16 sm:flex-row sm:items-end sm:justify-between sm:gap-8 sm:px-8 md:px-12 md:pb-20">
-        <h1 className="max-w-xl text-4xl font-medium uppercase leading-[1.05] tracking-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="max-w-xl text-4xl font-medium uppercase leading-[1.05] tracking-tight text-[#DA7E19] drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl">
           <Reveal as="span" delay={100} className="block ">
           The 
           </Reveal>
-          <Reveal as="span" delay={220} className="block pl-5 sm:pl-10">
+          <Reveal as="span" delay={220} className="block ">
           Future of
           </Reveal>
-          <Reveal as="span" delay={340} className="block pl-10 sm:pl-20">
+          <Reveal as="span" delay={340} className="block ">
           Study Abroad 
           </Reveal>
-          <Reveal as="span" delay={460} className="block pl-18 sm:pl-34">Recruitment</Reveal>
+          <Reveal as="span" delay={460} className="block ">Recruitment</Reveal>
           
         </h1>
 
@@ -38,14 +42,13 @@ export function SectionOne() {
           </Reveal>
 
           <Reveal delay={640}>
-            <a
-              href="https://wa.me/447721770779"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full rounded-full border border-white/60 px-8 py-3 text-center font-mono text-xs uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-white hover:text-black"
+            <button
+              type="button"
+              onClick={onContactClick}
+              className="block w-full rounded-full border border-white/60 px-8 py-3 text-center font-mono text-xs uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-[#DA7E19] hover:text-black"
             >
-              Partner With Us Today
-            </a>
+              Contact Us Today
+            </button>
           </Reveal>
         </div>
       </div>
